@@ -3,9 +3,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{site.name}}</title>
+    <meta charset="UTF-8">
+    <meta name="robots" content="{{site.robots}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{site.description}}">
+    <meta name="msvalidate.01" content="5D38763EEC078679E6C158DFAB433D2F" />
+    <meta name="google-site-verification" content="3rrK_7N4Ahn5-1ACbZSq7BeDYTqLbYyVmLD78RJT3gg" />
+    {% if page.author %}<meta name="author" content="{{site.author}}">{% endif %}
+    
+    <meta property="og:url" content="{{ site.url }}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="{{ site.title }}" />
+	<meta property="og:description" content="{{ site.description }}" />
+	<meta property="og:image" content="{{ site.url }}/uploads/posts/{{site.image}}" />
+     
+    <meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="{{ site.url }}" />
+	<meta name="twitter:creator" content="@{{site.twitter}}">
+	<meta name="twitter:title" content="{{site.title}}" />
+	<meta name="twitter:description" content="{{ site.description }}" />
+	<meta name="twitter:image" content="{{ site.url }}/uploads/posts/{{site.image}}" />
+	
+	{% if site.keywords %} <meta name="keywords" content="{{site.keywords}}" /> {% endif %}
+    {% if page.url == "/404/" %} <meta http-equiv="refresh" content="10; url=/">{% endif %}
+    <meta property="fb:app_id" content="{{site.url}}/" >
+	<link rel="stylesheet" href="{{site.url}}/style.css" type="text/css" >
+    <link rel="canonical" href="{{site.url}}">
+    <link rel="shortcut icon" type="image/png" href="{{ site.url }}/favicon.png">
+    <link href='{{ site.url }}/feed.xml' rel='alternate' type='application/atom+xml'>
+
+    <title>{{site.name}}</title>
 	<style>
 		body{background-color: #57aee5; padding:15% 0 0 0; color: #fff; text-align: center; font-family:sans-serif; }
 		nav, section, article, aside, footer {display: none;}
@@ -15,6 +42,9 @@
 		svg:hover{fill:#041e45;}
 	</style>
 </head>
+
+    
+    
 
 <body>
 	
